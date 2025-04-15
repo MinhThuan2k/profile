@@ -1,69 +1,28 @@
 ---
 const icons = [
-  {
-    src: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png',
-    alt: 'JavaScript'
-  },
-  {
-    src: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg',
-    alt: 'React'
-  },
-  {
-    src: 'https://www.php.net//images/logos/php-logo.svg',
-    alt: 'PHP'
-  },
-  {
-    src: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg',
-    alt: 'Laravel'
-  },
-  {
-    src: 'https://upload.wikimedia.org/wikipedia/en/thumb/d/dd/MySQL_logo.svg/120px-MySQL_logo.svg.png',
-    alt: 'mysql'
-  },
-  {
-    src: 'https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Docker_logo.svg/250px-Docker_logo.svg.png',
-    alt: 'docker'
-  },
-  {
-    src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/NestJS-logo-wordmark.svg/250px-NestJS-logo-wordmark.svg.png',
-    alt: 'nestjs'
-  },
-  {
-    src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Ubuntu-logo-2022.svg/250px-Ubuntu-logo-2022.svg.png',
-    alt: 'ubuntu'
-  },
-  {
-    src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Vue.png/120px-Vue.png',
-    alt: 'vue'
-  },
-  {
-    src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nginx_logo.svg/220px-Nginx_logo.svg.png',
-    alt: 'Nginx'
-  },
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png', alt: 'JavaScript', top: '10%', left: '5%' },
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg', alt: 'React', top: '20%', left: '85%' },
+  { src: 'https://www.php.net//images/logos/php-logo.svg', alt: 'PHP', top: '5%', left: '40%' },
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg', alt: 'Laravel', top: '75%', left: '10%' },
+  { src: 'https://upload.wikimedia.org/wikipedia/en/thumb/d/dd/MySQL_logo.svg/120px-MySQL_logo.svg.png', alt: 'MySQL', top: '85%', left: '60%' },
+  { src: 'https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Docker_logo.svg/250px-Docker_logo.svg.png', alt: 'Docker', top: '45%', left: '0%' },
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/NestJS-logo-wordmark.svg/250px-NestJS-logo-wordmark.svg.png', alt: 'NestJS', top: '60%', left: '90%' },
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Ubuntu-logo-2022.svg/250px-Ubuntu-logo-2022.svg.png', alt: 'Ubuntu', top: '30%', left: '3%' },
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Vue.png/120px-Vue.png', alt: 'Vue', top: '35%', left: '80%' },
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nginx_logo.svg/220px-Nginx_logo.svg.png', alt: 'Nginx', top: '90%', left: '20%' },
 ];
 
-// Function to randomly position each icon
-const getRandomPosition = () => {
-  const x = Math.floor(Math.random() * 100); // Random percentage for left
-  const y = Math.floor(Math.random() * 100); // Random percentage for top
-  return { x, y };
-};
 ---
 
-<div class="min-h-screen w-full absolute top-0 left-0 z-0">
-  {icons.map((icon) => {
-    const position = getRandomPosition();
-    return (
+<div class="absolute top-0 left-0 w-full h-full z-0">
+    {icons.map(icon => (
       <img
         src={icon.src}
         alt={icon.alt}
-        class="absolute transform transition duration-500 ease-in-out hover:scale-125"
-        style={{
-          top: `${position.y}%`, // Random top position
-          left: `${position.x}%`, // Random left position
-          width: '50px', // Set the size of the icons
-        }}
+        width="40"
+        height="40"
+        class="absolute transition-transform duration-300 hover:scale-125 opacity-70"
+        style={`top: ${icon.top}; left: ${icon.left};`}
       />
-    );
-  })}
-</div>
+    ))}
+  </div>
