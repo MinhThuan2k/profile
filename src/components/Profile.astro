@@ -1,0 +1,97 @@
+---
+// src/components/Profile.astro
+const {name, position} = Astro.props;
+---
+
+<div class="min-h-screen bg-gray-50 px-6 py-12">
+  <section class="bg-white rounded-3xl shadow-lg p-8 md:p-16 text-center max-w-5xl mx-auto">
+    <div class="flex flex-col items-center space-y-8">
+      <!-- Avatar -->
+      <img 
+        src="/images/avatar.jpg" 
+        alt="Profile Photo" 
+        class="w-40 h-40 rounded-full border-4 border-white shadow-lg object-cover"
+      />
+      <h1 class="text-4xl md:text-5xl font-extrabold text-gray-800 mt-4">Full Profile</h1>
+
+      <!-- About Section -->
+      <p class="text-base md:text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
+        I'm a dedicated <span class="font-medium text-blue-600">Web Developer</span> with over 
+        <span class="font-semibold">2 years of experience</span> in designing and building dynamic web applications and management systems. 
+        I specialize in the <span class="font-medium text-blue-600">Laravel</span> framework and am continuously expanding my skills in 
+        <span class="font-medium text-blue-600">full-stack development</span> using modern technologies like 
+        React, Vue, and NestJS. My goal is to create seamless, high-performance user experiences and deliver 
+        <span class="italic">reliable and scalable solutions</span> that drive real impact.
+      </p>
+
+      <!-- Skills Section -->
+      <div class="text-left max-w-3xl mx-auto space-y-6">
+        <h2 class="text-2xl font-semibold text-gray-800">Skills</h2>
+        <ul class="list-disc pl-6 text-gray-600">
+          <li>Laravel (Advanced)</li>
+          <li>Node.js (Basic NestJS)</li>
+          <li>React.js (Basic)</li>
+          <li>Vue.js (Basic)</li>
+          <li>MySQL / SQL Server</li>
+          <li>Docker (Basic)</li>
+          <li>Git, GitLab</li>
+        </ul>
+      </div>
+
+      <!-- Experience Section -->
+      <div class="text-left max-w-3xl mx-auto space-y-6">
+        <h2 class="text-2xl font-semibold text-gray-800">Experience</h2>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-700">PHP Developer at Gonsa (2023 - Present)</h3>
+          <p class="text-gray-600">
+            Developed and deployed backend APIs for delivery and order management, integrated SAP, WMS, and NEOX systems, and optimized backend performance using Laravel 8.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-700">PHP Developer at Warehouse Management System (2023 - Present)</h3>
+          <p class="text-gray-600">
+            Designed and developed intelligent APIs for warehouse operations, including inventory tracking and optimizing goods movement, using Laravel 8 for high performance.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-700">Intern at VNPT Internship (2022)</h3>
+          <p class="text-gray-600">
+            Developed a student management system with CRUD features and reporting using Laravel.
+          </p>
+        </div>
+      </div>
+
+      <!-- Projects Section -->
+      <div class="text-left max-w-3xl mx-auto space-y-6">
+        <h2 class="text-2xl font-semibold text-gray-800">Key Projects</h2>
+        <ul class="list-disc pl-6 text-gray-600">
+          <li><strong>Warehouse Management System (Nissin, Elmich, FMT):</strong> Developed APIs for smart warehouse operations, including intelligent picking and inventory tracking.</li>
+          <li><strong>Gonsa – Transport Management System:</strong> Built backend APIs for delivery and order management, integrating SAP, WMS, and NEOX systems.</li>
+          <li><strong>BigCamera – E-Commerce Website:</strong> Customized Magento modules for an e-commerce platform selling cameras.</li>
+          <li><strong>Sky Premium – E-Commerce Platform:</strong> Contributed APIs and debugged issues on a Magento-based system with CRM and mobile integration.</li>
+          <li><strong>Student Manager System:</strong> Developed features for managing student registration, timetables, and transcripts, with CRUD operations for teachers and admin.</li>
+          <li><strong>Men’s Fashion Store – Graduation Thesis:</strong> Developed a full e-commerce platform with user authentication, a cart, and an admin panel, integrating VNPay and Google/Facebook login.</li>
+        </ul>
+      </div>
+
+      <!-- Education Section -->
+      <div class="text-left max-w-3xl mx-auto space-y-6">
+        <h2 class="text-2xl font-semibold text-gray-800">Education</h2>
+        <p class="text-gray-600">
+          <strong>University of Information Technology</strong> (09/2018 – 09/2022)
+          <br />
+          Major: Software Engineering
+          <br />
+          GPA: 3.29/4.0
+        </p>
+      </div>
+
+      <!-- Button to go back -->
+      <div class="pt-8">
+        <a href="/" class="inline-block bg-blue-600 text-white font-semibold py-3 px-6 rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg transition duration-300">
+          Back to About Me
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
